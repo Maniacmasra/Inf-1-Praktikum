@@ -51,7 +51,6 @@ int main(void)
 
 			do//Dimension des Widerstandswertes    
 			{
-
 				cout << "\n Widerstandsdimension: ";
 				cout << "\n\t MiliOhm --> 1";
 				cout << "\n\t     Ohm --> 2";
