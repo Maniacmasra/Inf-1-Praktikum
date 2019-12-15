@@ -92,14 +92,13 @@ int menü(Spieler ds, int& ort)
 			}
 			else if (puffer == "Level")
 			{
-				do
+				/*do
 				{
 					cin >> eingabeconvert;
 					ok = ConvertToInt(eingabeconvert, add);
 				} while (!ok);
-				ds.setLevelup;
-				cout << "Dein neues Level ist " << ds.setLevelup << endl;
-				break;
+				cout << "Dein neues Level ist " << ds.setLevelup(add) << endl;
+				break;*/
 			}
 			else if (puffer == "Gold")
 			{

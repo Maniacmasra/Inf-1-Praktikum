@@ -126,7 +126,7 @@ int ort2(Spieler ds)//Wald-Lichtung
 		}
 	}
 }
-/*
+
 int ort3(Spieler ds)//Dorf
 {
 	if (ort3Eventa == true)
@@ -147,4 +147,3 @@ int ort4(Spieler ds)//Tiefer Wald
 	ort = 1;
 	return ort;;
 }
-*/

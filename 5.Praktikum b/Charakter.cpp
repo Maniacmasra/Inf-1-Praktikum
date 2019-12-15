@@ -230,7 +230,6 @@ Spieler ChrErstellung()
 		break;
 	default: break;
 	}
-	cout << "Du hast die Klasse Waldläufer gewählt\n";
 	return ds;
 }
 

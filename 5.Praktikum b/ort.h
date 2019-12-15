@@ -18,5 +18,5 @@ class Spieler;
 //Orte
 int ort1(Spieler ds);//1 = Starthüte
 int ort2(Spieler ds);//2 = Wald-Lichtung
-//int ort3(Spieler ds);//3 = Dorf
-//int ort4(Spieler ds);//4 = Tiefer Wald
+int ort3(Spieler ds);//3 = Dorf
+int ort4(Spieler ds);//4 = Tiefer Wald

@@ -25,7 +25,8 @@ int main(void)
 	{
 		cout << "\n\n Was wollen Sie tun?";
 		cout << "\n Neuen Widerstand eingeben (n/N)";
-		cout << "\n Widerstands-Datensätze ausgeben (a/A)";
+		cout << "\n Widerstands-Datensätze auslesen (a/A)";
+		cout << "\n Widerstands-Datensätze ausgeben (c/C)";
 		cout << "\n Datensätze suchen (s/S)";
 		cout << "\n Datensätze speichern (m/M)";
 		cout << "\n Programm beenden (b/B)" << endl;
@@ -65,11 +66,13 @@ int main(void)
 			gesichert = false;
 			break;
 		case 'a':
+			ausgabe(widDaten);
+			break;
+		case 'c':
 			system("cls");
 			if (ausDateiLesen(widDaten))
 			{
-				cout << "\n Daten erfolgreich ausgelesen.\n";
-				ausgabe(widDaten);
+				cout << "\n Daten erfolgreich ausgelesen.\n";				
 			}
 			else
 			{
@@ -77,7 +80,7 @@ int main(void)
 			}
 			break;
 		case 's'://Suche
-			if (anz != 0)
+			if (anz != -1)
 			{			
 				cout << "\n\n  Suche einen passenden Datensatz für: ";
 				cin >> suchWort;
@@ -100,7 +103,7 @@ int main(void)
 				}
 			}
 			else 
-				cout << "\n  Kein passender Treffer gefunden!";
+				cerr << "\n Keine Dateien vorhanden!\n";
 			break;
 		case 'm':
 			system("cls");

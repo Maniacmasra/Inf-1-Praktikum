@@ -31,17 +31,16 @@ int main(void)
 				switch (ort)
 				{
 				case 0://Menü
-					menü(ds, ort); break;
+					ort = menü(ds, ort); break;
 				case 1://Starthüte
-					ort1(ds); break;
+					ort = ort1(ds); break;
 				case 2://Wald-Lichtung
-					ort2(ds); break;
+					ort = ort2(ds); break;
 				case 3://Dorf
-					//ort3(ds); break;
+					ort = ort3(ds); break;
 				case 4://Tiefer Wald
-					//ort4(ds); break;
+					ort = ort4(ds); break;
 				}
-				cout << "\n test";
 			}
 			break;
 		case 'h'://Highscore
