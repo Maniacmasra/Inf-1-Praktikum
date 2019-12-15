@@ -25,8 +25,8 @@ int main(void)
 	{
 		cout << "\n\n Was wollen Sie tun?";
 		cout << "\n Neuen Widerstand eingeben (n/N)";
-		cout << "\n Widerstands-Datensätze auslesen (a/A)";
-		cout << "\n Widerstands-Datensätze ausgeben (c/C)";
+		cout << "\n Widerstands-Datensätze ausgeben (a/A)";
+		cout << "\n Widerstands-Datensätze auslesen (c/C)";
 		cout << "\n Datensätze suchen (s/S)";
 		cout << "\n Datensätze speichern (m/M)";
 		cout << "\n Programm beenden (b/B)" << endl;
@@ -80,30 +80,25 @@ int main(void)
 			}
 			break;
 		case 's'://Suche
-			if (anz != -1)
-			{			
-				cout << "\n\n  Suche einen passenden Datensatz für: ";
-				cin >> suchWort;
-				int suchPosition = suchen(widDaten, anz, suchWort);
-				if (suchPosition != -1)
+			cout << "\n\n  Suche einen passenden Datensatz für: ";
+			cin >> suchWort;
+			int suchPosition = suchen(widDaten, anz, suchWort);
+			if (suchPosition != -1)
+			{
+				suchWort = widDaten[index].widBauForm;
+				switch (widDaten[index].dim)//zum zuweisen der passenden dim
 				{
-					suchWort = widDaten[index].widBauForm;
-					switch (widDaten[index].dim)//zum zuweisen der passenden dim
-					{
-					case 1: dim = "Mili-Ohm"; break;
-					case 2: dim = "Ohm"; break;
-					case 3: dim = "Kilo-Ohm"; break;
-					case 4: dim = "Mega-Ohm"; break;
-					default: break;
-					}
-					cout << right << setw(20) << widDaten[index].widBauForm;
-					cout << right << setw(10) << setprecision(4) << widDaten[index].widWert;
-					cout << right << setw(10) << dim;
-					suchPosition = -1;
+				case 1: dim = "Mili-Ohm"; break;
+				case 2: dim = "Ohm"; break;
+				case 3: dim = "Kilo-Ohm"; break;
+				case 4: dim = "Mega-Ohm"; break;
+				default: break;
 				}
+				cout << right << setw(20) << widDaten[index].widBauForm;
+				cout << right << setw(10) << setprecision(4) << widDaten[index].widWert;
+				cout << right << setw(10) << dim;
+				suchPosition = -1;
 			}
-			else 
-				cerr << "\n Keine Dateien vorhanden!\n";
 			break;
 		case 'm':
 			system("cls");
