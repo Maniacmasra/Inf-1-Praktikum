@@ -16,7 +16,6 @@ int main(void)
 	locale::global(locale("German_germany")); //Umlaute via Konsole
 	bool ok = true;
 	bool gesichert = false;
-	int suchPosition;
 	int anz = -1;
 	int index = -1;
 	string suchWort, dim;
@@ -82,8 +81,8 @@ int main(void)
 		case 's'://Suche
 			cout << "\n\n  Suche einen passenden Datensatz für: ";
 			cin >> suchWort;
-			suchPosition = suchen(widDaten, anz, suchWort);
-			if (suchPosition != -1)
+			index = suchen(widDaten, anz, suchWort);
+			if (index != -1)
 			{
 				suchWort = widDaten[index].widBauForm;
 				switch (widDaten[index].dim)//zum zuweisen der passenden dim
@@ -97,7 +96,7 @@ int main(void)
 				cout << right << setw(20) << widDaten[index].widBauForm;
 				cout << right << setw(10) << setprecision(4) << widDaten[index].widWert;
 				cout << right << setw(10) << dim;
-				suchPosition = -1;
+				index = -1;
 			}
 			break;
 		case 'm':
