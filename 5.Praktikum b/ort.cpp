@@ -12,7 +12,7 @@ static bool ort1Eventc = true;
 static bool ort2Event = true;
 static bool ort3Eventa = true;
 
-char ort1(Spieler ds)//Starthüte
+int ort1(Spieler ds)//Starthüte
 {
 	system("cls");
 	if (ort1Eventa == true)
@@ -79,14 +79,14 @@ char ort1(Spieler ds)//Starthüte
 			cout << "Ahh, frische Luft! In der Hütte war es ganz schön stickig.";
 			ort = 2;
 			return ort;
-		case 'm':
+		case '0':
 			ort = 0;
 			return ort;			
 		}
 	}
 }
 
-char ort2(Spieler ds)//Wald-Lichtung
+int ort2(Spieler ds)//Wald-Lichtung
 {
 	cout << "Ich betrete eine Lichtung kurz vor einem Wald.\n";
 	cout << "Ich könnte der Lichtung tiefer in den Wald folgen... In der anderen Richtung erblicke ich aber ein kleines Dorf.";
@@ -112,25 +112,21 @@ char ort2(Spieler ds)//Wald-Lichtung
 			cout << "Das Dorf schein mir gerade die beste wahl.";
 			ort = 4;
 			return ort;
-			break;
 		case '3'://Dorf
 			cout << "Das Dorf schein mir gerade die beste wahl.";
 			ort = 3;
 			return ort;;
-			break;
 		case '4'://Hütte
 			cout << "Ich glaube ich schaue mir nochmal die Hütte an.";
 			ort = 1;
 			return ort;;
-			break;
-		case 'm':
+		case '0':
 			ort = 0;
 			return ort;
-			break;
 		}
 	}
 }
-
+/*
 int ort3(Spieler ds)//Dorf
 {
 	if (ort3Eventa == true)
@@ -151,3 +147,4 @@ int ort4(Spieler ds)//Tiefer Wald
 	ort = 1;
 	return ort;;
 }
+*/

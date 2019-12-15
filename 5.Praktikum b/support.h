@@ -19,4 +19,4 @@ bool ConvertToInt(char eingabeconvert[10], int& add);
 
 void timer(int stunde, int min, int sek);
 
-int menü(Spieler ds, char& ort);
+int menü(Spieler ds, int& ort);

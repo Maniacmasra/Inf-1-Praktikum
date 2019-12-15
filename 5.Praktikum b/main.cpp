@@ -15,7 +15,7 @@ int main(void)
 	Spieler ds;
 	char eingabe;	
 	bool ok = true;
-	char ort = 1;
+	int ort = 1;
 	
 	while (true)
 	{
@@ -28,19 +28,18 @@ int main(void)
 			ds = ChrErstellung();			
 			while (ok == true)
 			{
-				
 				switch (ort)
 				{
-				case '0'://Menü
+				case 0://Menü
 					menü(ds, ort); break;
-				case '1'://Starthüte
+				case 1://Starthüte
 					ort1(ds); break;
-				case '2'://Wald-Lichtung
+				case 2://Wald-Lichtung
 					ort2(ds); break;
-				case '3'://Dorf
-					ort3(ds); break;
-				case '4'://Tiefer Wald
-					ort4(ds); break;
+				case 3://Dorf
+					//ort3(ds); break;
+				case 4://Tiefer Wald
+					//ort4(ds); break;
 				}
 				cout << "\n test";
 			}

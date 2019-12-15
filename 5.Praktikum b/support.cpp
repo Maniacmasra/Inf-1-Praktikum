@@ -40,7 +40,7 @@ void timer(int stunde, int min, int sek)
 	}
 }
 
-int menü(Spieler ds, char& ort)
+int menü(Spieler ds, int& ort)
 {
 	char eingabe, eingabeconvert[10];
 	string puffer;
@@ -92,14 +92,14 @@ int menü(Spieler ds, char& ort)
 			}
 			else if (puffer == "Level")
 			{
-				/*do
+				do
 				{
 					cin >> eingabeconvert;
 					ok = ConvertToInt(eingabeconvert, add);
 				} while (!ok);
-				ds.addLevel;
-				cout << "Dein neues Level ist " << ds.addLevel << endl;
-				break;*/
+				ds.setLevelup;
+				cout << "Dein neues Level ist " << ds.setLevelup << endl;
+				break;
 			}
 			else if (puffer == "Gold")
 			{
